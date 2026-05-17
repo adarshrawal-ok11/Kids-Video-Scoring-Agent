@@ -1,10 +1,10 @@
-# TARA — Trustworthy AI Review Agent for Kids' Videos
+Trustworthy AI Review Agent for Kids' Videos
 
-TARA is an AI-powered pipeline that automatically scores YouTube videos for safety and suitability for Indian children aged **3–5 years**. It combines multiple vision-language models, programmatic signal analysis, and a human-calibrated gold set to produce a structured, auditable verdict on every video.
+This is an AI-powered pipeline that automatically scores YouTube videos for safety and suitability for Indian children aged **3–5 years**. It combines multiple vision-language models, programmatic signal analysis, and a human-calibrated gold set to produce a structured, auditable verdict on every video.
 
 ---
 
-## Why TARA?
+## Why?
 
 Parents and platforms struggle to verify whether a children's video is truly safe — content moderation at scale misses cultural nuance, stimulation levels, and educational quality. TARA brings together:
 
