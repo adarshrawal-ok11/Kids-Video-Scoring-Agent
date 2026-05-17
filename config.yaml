@@ -1,0 +1,63 @@
+models:
+  veto: "gemini-2.5-flash"
+  narrator: "gemini-2.5-flash"
+  scorer_gemini: "gemini-3-flash-preview"
+  scorer_claude: "claude-sonnet-4-6"
+  critic: "gemini-2.5-pro"
+  whisper: "whisper-1"
+
+embedding:
+  model: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+  dim: 768
+  normalize: true
+
+narrator:
+  interval_seconds: 10
+  max_chunks: 60
+
+scoring:
+  n_frames: 15
+  frame_sampling: "uniform"
+
+veto:
+  n_frames: 5
+
+retrieval:
+  k_similar_gold: 3
+  min_similarity_threshold: 0.4
+
+weights:
+  content_safety: 0.25
+  stimulation: 0.20
+  education: 0.20
+  channel_level: 0.10
+  consistency_bonus: 0.25
+
+thresholds:
+  approved_overall: 70
+  approved_cs_minimum: 60
+  approved_subvar_floor: 40
+  rejected_overall: 50
+  rejected_subvar_floor: 20
+
+retries:
+  max_attempts: 3
+  base_delay_seconds: 2
+  max_delay_seconds: 60
+
+cache:
+  enabled: true
+  ttl_days: 30
+
+logging:
+  level: "INFO"
+  console: true
+  file: true
+
+cost_tracking:
+  enabled: true
+  warn_threshold_per_video: 1.00
+  hard_limit_per_batch: 100.00
+
+prompts:
+  version: "v2.0"

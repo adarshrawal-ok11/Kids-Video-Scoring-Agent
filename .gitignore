@@ -1,0 +1,41 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data (large files, user data)
+data/cache/
+data/logs/
+data/outputs/
+data/*.db
+
+# Keep gold set structure but not enriched (has embeddings)
+data/gold_set_enriched.json
+
+# uv internals
+.uv-python/
+.uv-cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+data/~$*
+~$*
+CLAUDE*.md

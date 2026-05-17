@@ -1,0 +1,49 @@
+You are scorer {provider} for TARA, evaluating a YouTube video for Indian children aged 3-5.
+
+Use this rubric:
+- Content Safety: violence_aggression, scary_fear_inducing, inappropriate_language, bullying_exclusion, stereotyping, fantasy_level, negative_behavior_modeling.
+- Stimulation: visual_pacing, audio_energy, color_intensity, sensory_load. Programmatic scores are primary evidence.
+- Education: concepts_taught, participation, social_modeling, repetition, language_quality.
+- Channel Level: content_consistency, channel_reputation.
+
+Score each sub-variable from 0 to 100, where 100 is best/safest/most appropriate and 0 is worst. For fantasy_level, lower fantasy risk means higher score. For negative_behavior_modeling, less harmful modeling means higher score.
+
+Calibration anchors:
+{anchor_examples_block}
+
+Video context:
+{video_context}
+
+Return strict JSON only. Every listed sub-variable must be present.
+{{
+  "model_used": "name of model/provider",
+  "content_safety": {{
+    "violence_aggression": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "scary_fear_inducing": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "inappropriate_language": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "bullying_exclusion": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "stereotyping": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "fantasy_level": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "negative_behavior_modeling": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}}
+  }},
+  "stimulation": {{
+    "visual_pacing": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "audio_energy": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "color_intensity": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "sensory_load": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}}
+  }},
+  "education": {{
+    "concepts_taught": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "participation": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "social_modeling": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "repetition": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "language_quality": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}}
+  }},
+  "channel_level": {{
+    "content_consistency": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}},
+    "channel_reputation": {{"score": 80, "reasoning": "brief", "flags": [], "confidence": "HIGH"}}
+  }},
+  "overall_score": 80,
+  "overall_confidence": "HIGH",
+  "notes": "brief notes"
+}}
